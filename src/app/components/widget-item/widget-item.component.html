@@ -1,0 +1,9 @@
+<mat-card style="border-radius: 4px; overflow: hidden; height: 96%; padding: 0px">
+    <div class="title">
+      <span style="color: gray;font-weight: bold;">Category</span>
+    </div>
+    <div style="display: block; margin-top: 16px">
+      <canvas baseChart [data]="pieChartData" [labels]="labels"  [options]="options" [chartType]="pieChartType" ></canvas>
+      <!-- (chartClick)="chartClicked($event)" -->
+    </div>
+  </mat-card>
