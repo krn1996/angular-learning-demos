@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
 import { SharedService } from './shared.service';
 
 @Injectable({
@@ -6,6 +7,7 @@ import { SharedService } from './shared.service';
 })
 export class IssueTrackingService {
 
+  issueTypeData = new Subject<any>();
   constructor(public _sharedService: SharedService) { }
 
     // create issue

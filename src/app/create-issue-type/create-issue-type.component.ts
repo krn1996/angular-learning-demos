@@ -1,12 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
-import {
-  MAT_FORM_FIELD,
-  MatFormField,
-  MatFormFieldControl,
-} from '@angular/material/form-field';
 import { IssueTrackingService } from '../issue-tracking.service';
-import { SharedService } from '../shared.service';
 
 @Component({
   selector: 'app-create-issue-type',
@@ -72,10 +66,11 @@ export class CreateIssueTypeComponent implements OnInit {
     dueTimeRuleType: this.dueDateRuleTypes[0].value,
     dueTimeRuleId: null,
   };
+  issueTypeData: any[] = [];
 
   constructor(
     public dialogRef: MatDialogRef<CreateIssueTypeComponent>,
-    public _IssueTrackingService : IssueTrackingService
+    public _IssueTrackingService: IssueTrackingService
   ) {}
 
   ngOnInit(): void {}
@@ -89,32 +84,14 @@ export class CreateIssueTypeComponent implements OnInit {
   }
 
   createIssueType() {
-    // let issueType = {
-    //   issueType: 'Rohit issue',
-    //   isSystemIssue: false,
-    //   isHidden: false,
-    //   relatedTo: ['Accounts'],
-    //   extensionReasons: [],
-    //   standardResolutionTime: 10800000,
-    //   isInternal: false,
-    //   customFields: [],
-    //   defaultAssignee: null,
-    //   defaultFollowers: [],
-    //   status: 'ACTIVE',
-    //   escalationLevels: [],
-    //   showIn: ['shipment'],
-    //   sharedDepartments: ['Test 2'],
-    //   category: 'Ticket',
-    //   linkedIssue: [],
-    //   assigneeRuleType: 'SPECIFIED',
-    //   assigneeRuleId: null,
-    //   followerRuleType: 'SPECIFIED',
-    //   followerRuleId: null,
-    //   dueTimeRuleType: 'SPECIFIED',
-    //   dueTimeRuleId: null,
-    // };
-    this._IssueTrackingService.createIssueType(this.issueType).subscribe( data => {
-      console.log(data);
-    });
+    this._IssueTrackingService
+      .createIssueType(this.issueType)
+      .subscribe((data) => {
+        console.log(data);
+        this.issueTypeData = data;
+        if (data) {
+          this._IssueTrackingService.issueTypeData.next(data.data);
+        }
+      });
   }
 }

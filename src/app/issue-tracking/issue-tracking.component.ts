@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { CreateIssueTypeComponent } from '../create-issue-type/create-issue-type.component';
+import { IssueTrackingService } from '../issue-tracking.service';
+
 
 @Component({
   selector: 'app-issue-tracking',
@@ -9,16 +11,30 @@ import { CreateIssueTypeComponent } from '../create-issue-type/create-issue-type
 })
 export class IssueTrackingComponent implements OnInit {
 
-  constructor(private dialog: MatDialog) { }
+  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
+  issueTypeData: any;
+  dataSource: any;
+  constructor(private dialog: MatDialog, public _IssueTrackingService :IssueTrackingService) { }
 
-  ngOnInit(): void {
-    this.openCreateIssueType();
+  ngOnInit(): void { 
+   
   }
+
+  ngDoCheck(): void {
+     this._IssueTrackingService.issueTypeData.subscribe(data => {
+      if(data) {
+        this.issueTypeData = data;
+        this.dataSource = [this.issueTypeData];
+      }
+     });
+   }
+  
 
   openCreateIssueType() {
     const dialogRef = this.dialog.open(CreateIssueTypeComponent,{
       height: '356',
       width: '480px',      
     });
+    
   }
 }
