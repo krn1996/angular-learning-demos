@@ -16,6 +16,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from "@angular/material/input";
 import { HttpClientModule } from '@angular/common/http';
 import {MatTableModule} from '@angular/material/table';
+import { AlplBillComponent } from './alpl-bill/alpl-bill.component';
 
  
 @NgModule({
@@ -23,7 +24,8 @@ import {MatTableModule} from '@angular/material/table';
     AppComponent,
     ParentComponent,
     IssueTrackingComponent,
-    CreateIssueTypeComponent
+    CreateIssueTypeComponent,
+    AlplBillComponent
   ],
   imports: [
     BrowserModule,
