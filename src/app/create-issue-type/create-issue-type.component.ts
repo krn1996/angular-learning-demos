@@ -1,6 +1,7 @@
 import { Component, OnInit, Output } from '@angular/core';
-import { MatDialogRef } from '@angular/material/dialog';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { IssueTrackingService } from '../issue-tracking.service';
+import { UpdateIssueTypeComponent } from '../update-issue-type/update-issue-type.component';
 
 @Component({
   selector: 'app-create-issue-type',
@@ -70,7 +71,8 @@ export class CreateIssueTypeComponent implements OnInit {
 
   constructor(
     public dialogRef: MatDialogRef<CreateIssueTypeComponent>,
-    public _IssueTrackingService: IssueTrackingService
+    public _IssueTrackingService: IssueTrackingService,
+    private dialog: MatDialog
   ) {}
 
   ngOnInit(): void {}
@@ -87,11 +89,21 @@ export class CreateIssueTypeComponent implements OnInit {
     this._IssueTrackingService
       .createIssueType(this.issueType)
       .subscribe((data) => {
-        console.log(data);
         this.issueTypeData = data;
         if (data) {
           this._IssueTrackingService.issueTypeData.next(data.data);
+          this.openUpdateIssueType()
         }
       });
+  }
+
+  openUpdateIssueType() {
+    const dialogRef = this.dialog.open(UpdateIssueTypeComponent,{
+      data: {
+        issueTypeData: this.issueTypeData,
+       },
+      height: '356',
+      width: '680px',      
+    });
   }
 }

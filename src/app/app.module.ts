@@ -17,6 +17,8 @@ import { MatInputModule } from "@angular/material/input";
 import { HttpClientModule } from '@angular/common/http';
 import {MatTableModule} from '@angular/material/table';
 import { AlplBillComponent } from './alpl-bill/alpl-bill.component';
+import { UpdateIssueTypeComponent } from './update-issue-type/update-issue-type.component';
+import {MatMenuModule} from '@angular/material/menu';
 
  
 @NgModule({
@@ -25,7 +27,8 @@ import { AlplBillComponent } from './alpl-bill/alpl-bill.component';
     ParentComponent,
     IssueTrackingComponent,
     CreateIssueTypeComponent,
-    AlplBillComponent
+    AlplBillComponent,
+    UpdateIssueTypeComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +42,8 @@ import { AlplBillComponent } from './alpl-bill/alpl-bill.component';
     MatFormFieldModule,
      BrowserAnimationsModule,
      HttpClientModule,
-     MatTableModule
+     MatTableModule,
+     MatMenuModule
     
   ],
   providers: [],

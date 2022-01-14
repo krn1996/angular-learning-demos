@@ -15,4 +15,14 @@ export class IssueTrackingService {
       let path = 'https://apis.fretron.com/issue/v1/issue-type';
       return this._sharedService.callService("post", reqObj, path);
     }
+
+    public fetchCustomFields() {
+      let path = 'https://apis.fretron.com/issue/v1/issue/customFields?search=&offset=0';
+      return this._sharedService.callService("get", '', path);
+    }
+
+    public saveAllCustomFields(restrictions: any) {
+      let path = 'https://apis.fretron.com/issue/v1/issue/restrictions';
+      return this._sharedService.callService("post", restrictions, path);
+    }
 }

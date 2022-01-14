@@ -18,7 +18,7 @@ export class SharedService {
   ): Observable<any> {
     this.headers = new HttpHeaders({
       "Content-Type": "application/json",
-      Authorization: "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NDEyOTQyMjYsInVzZXJJZCI6IjVkYTE4ODQ2LTNjMmItNGY0MC1hOTg5LWJhYzY2ODYyZDllNiIsImVtYWlsIjoibml0aW4ua3VtYXJAZnJldHJvbi5jb20iLCJtb2JpbGVOdW1iZXIiOiI4ODAyNjk5MTAwIiwib3JnSWQiOiJjMjRmN2M5MS0zMGJhLTQ1MzMtYjg2ZC05ZWNhNjQ0ZTY2MDUiLCJuYW1lIjoiTml0aW4gS3VtYXIiLCJvcmdUeXBlIjoiRkxFRVRfT1dORVIiLCJpc0dvZCI6ZmFsc2UsInBvcnRhbFR5cGUiOiJiYXNpYyJ9.jJxqt3o8MQ6nav4b8RwvuMJkjH1bqtBeJRno_BX4fPY",
+      Authorization: "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NDAxNTc2NjYsInVzZXJJZCI6ImE0MmU1MzljLTg4ZjMtNDJjZi1hMWU3LWQxM2UwYjYwODMzZCIsImVtYWlsIjoic3lzdGVtX2ludGVncmF0aW9uQGZyZXRyb24uY29tIiwibW9iaWxlTnVtYmVyIjoiOTAwMDAwMDAwMCIsIm9yZ0lkIjoiZWNlOGRjZWUtZjk0Mi00ZjE2LWFmM2EtMTg2ZmQwOTc3YjBkIiwibmFtZSI6IlN5c3RlbSBJbnRlZ3JhdGlvbiIsIm9yZ1R5cGUiOiJGTEVFVF9PV05FUiIsImlzR29kIjp0cnVlLCJwb3J0YWxUeXBlIjoiYmFzaWMifQ.X2fwsbUmLm2HKTr1JpX8SOuTVu5etv3NPZ0J_0XVBog",
     });
 
     if (methodType === "get") {

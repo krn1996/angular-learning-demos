@@ -23,7 +23,7 @@ export class IssueTrackingComponent implements OnInit {
   ngDoCheck(): void {
      this._IssueTrackingService.issueTypeData.subscribe(data => {
       if(data) {
-        this.issueTypeData = data;
+        this.issueTypeData = data;        
         this.dataSource = [this.issueTypeData];
       }
      });
@@ -35,6 +35,5 @@ export class IssueTrackingComponent implements OnInit {
       height: '356',
       width: '480px',      
     });
-    
   }
 }
