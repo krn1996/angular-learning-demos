@@ -1,0 +1,37 @@
+ 
+
+<div style="box-sizing: border-box">
+    <div
+      class="df ai jc"
+      style="padding: 0.8rem 1rem 0.8rem 1.5rem; background: #efefef"
+    >
+      <span class="mt fw mf">Issue Type Detail</span>
+      <mat-icon class="mt xlf cp" (click)="close()">clear</mat-icon>
+    </div>
+  
+    <div class="flex-container" style="border: 1px solid;border-radius: 10px; margin: 20px;">
+        <div>
+          <span >Issue Type:</span> <br>
+           <span >{{data.issueTypeData.issueType}}</span><br>
+        </div>
+       </div>
+  
+    
+       <div class="flex-container" style="border: 1px solid;border-radius: 10px; margin: 20px;">
+        <div>
+        <span >Related To :</span>  <span >{{data.issueTypeData.relatedTo}}</span><br>
+          <span>Followers :</span> <br>
+        <span>Assignee :</span> <br>
+        <span>Custom Fields:</span>{{data.issueTypeCustomField.fieldKey}} - {{data.issueTypeCustomField.fieldType}}<br>
+        </div>
+       
+       </div>
+
+
+     
+
+
+  
+  </div>
+  
+  

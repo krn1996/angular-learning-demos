@@ -8,6 +8,8 @@ import { SharedService } from './shared.service';
 export class IssueTrackingService {
 
   issueTypeData = new Subject<any>();
+  issueTypeCustomField = new Subject<any>();
+
   constructor(public _sharedService: SharedService) { }
 
     // create issue

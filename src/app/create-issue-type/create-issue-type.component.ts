@@ -92,6 +92,7 @@ export class CreateIssueTypeComponent implements OnInit {
         this.issueTypeData = data;
         if (data) {
           this._IssueTrackingService.issueTypeData.next(data.data);
+          this.close();
           this.openUpdateIssueType()
         }
       });

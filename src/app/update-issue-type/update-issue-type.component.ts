@@ -81,6 +81,8 @@ export class UpdateIssueTypeComponent implements OnInit {
       .subscribe(
         (res: any) => {
           if (res.status === 200) {
+            this._IssueTrackingService.issueTypeCustomField.next(res.data[0].cfs);
+             this.close();
           }
         },
       );

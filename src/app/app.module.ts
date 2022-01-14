@@ -19,6 +19,7 @@ import {MatTableModule} from '@angular/material/table';
 import { AlplBillComponent } from './alpl-bill/alpl-bill.component';
 import { UpdateIssueTypeComponent } from './update-issue-type/update-issue-type.component';
 import {MatMenuModule} from '@angular/material/menu';
+import { IssueTypeDetailComponent } from './issue-type-detail/issue-type-detail.component';
 
  
 @NgModule({
@@ -28,7 +29,8 @@ import {MatMenuModule} from '@angular/material/menu';
     IssueTrackingComponent,
     CreateIssueTypeComponent,
     AlplBillComponent,
-    UpdateIssueTypeComponent
+    UpdateIssueTypeComponent,
+    IssueTypeDetailComponent
   ],
   imports: [
     BrowserModule,

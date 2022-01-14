@@ -1,0 +1,31 @@
+.flex-container {
+    display: flex;
+   }
+  
+  .flex-container > div {
+     margin: 10px;
+    padding: 10px;
+    font-size: 18px;
+    width: 50%;
+  }
+
+
+  .button {
+    margin: 10px;
+    float: right;
+    color: white;
+    background-color: #1078cf;
+    font-size: 20px;
+    padding: 5 px;
+  }
+
+
+  table {
+    width: 93%;
+     margin-left: 3%;
+  }
+  ::ng-deep .mat-dialog-container {
+    padding: 0px;
+    border-radius: 4px;
+  }
+  
