@@ -20,6 +20,7 @@ import { AlplBillComponent } from './alpl-bill/alpl-bill.component';
 import { UpdateIssueTypeComponent } from './update-issue-type/update-issue-type.component';
 import {MatMenuModule} from '@angular/material/menu';
 import { IssueTypeDetailComponent } from './issue-type-detail/issue-type-detail.component';
+import { RoutingComponent } from './routing/routing.component';
 
  
 @NgModule({
@@ -30,7 +31,8 @@ import { IssueTypeDetailComponent } from './issue-type-detail/issue-type-detail.
     CreateIssueTypeComponent,
     AlplBillComponent,
     UpdateIssueTypeComponent,
-    IssueTypeDetailComponent
+    IssueTypeDetailComponent,
+    RoutingComponent
   ],
   imports: [
     BrowserModule,
