@@ -1,0 +1,334 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ASHUTOSH LOGISTICS</title>
+    <style>
+      .bankDetail {
+        display: flex;
+        flex-direction: row;
+        margin-top: 3px;
+      }
+      .bankinfo {
+        width: 15%;
+      }
+      .tableList {
+        width: 100%;
+      }
+      .logo {
+        width: 5%;
+      }
+      .addressdetailMob {
+        width: 75%;
+      }
+      .addressDetail {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+      }
+      @media (max-width: 768px) {
+        .addressDetail {
+          text-align: center;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+        }
+        .tableList {
+          overflow-x: auto;
+        }
+        .logo {
+          width: 100%;
+        }
+        .addressdetailMob {
+          width: 100%;
+        }
+        .bankinfo {
+          width: 100%;
+        }
+        .bankDetail {
+          display: flex;
+          flex-direction: column;
+          margin-top: 5px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div style="border: 1px solid black">
+      <div style="width: 5%"></div>
+      <div class="addressDetail">
+        <div class="logo">
+          <img
+            src=""
+          />
+        </div>
+        <div class="addressdetailMob">
+          <p style="font-weight: bold; font-size: 15px">INVOICE</p>
+          <p style="font-weight: bold; font-size: 25px">
+            ASHUTOSH LOGISTICS PVT LTD
+          </p>
+          <h6>
+            A-47, SECOND FLOOR, RIGHT SIDE NEAR SABKI RASOI MB ROAD VISHWAKARMA
+            COLONY NEW DELHI-110044 PHONE NO. 011-26364589/90/91
+          </h6>
+          <h6>COMPUTER GENERATED INVOICE, SIGNATURE NOT REQUIRED</h6>
+          <h6>
+            PAN NO. AAFCA5342P SERVICE TAX NO. AAFCA5342PSD001 GSTIN NO.
+            07AAFCA5342P1ZD
+          </h6>
+          <h6>CIN NO. U60231DL2005PTC144221</h6>
+          <h6>SAC CODE: 996511</h6>
+          <h6>Notification no. 5/2017 - Central Tax</h6>
+        </div>
+      </div>
+      <div style="width: 15%"></div>
+
+      <table border="1" style="width: 100%; border-collapse: collapse">
+        <tbody style="font-size:14px">
+          <tr>
+            <td style="width: 30%" rowspan="2">
+              <p style="font-weight: bold; font-size: 15px">M/S :  ${shArr[0].consignments[0].consigner.name ? shArr[0].consignments[0].consigner.name : 'N/A' } </p >
+            </td>
+            <td style="width: 40%" rowspan="2">
+              <p style="font-weight: bold; font-size: 15px">GSTIN NO. : ${shArr[0].consignments[0].consigner.gstNo ? shArr[0].consignments[0].consigner.gstNo : 'N/A'} </p>
+            </td>
+            <td colspan="2">
+              <div style="display: flex; flex-direction: row">
+                <div style="width: 50%">BILL NO.</div>
+                <div style="width: 50%">: ${vendorBill.billNumber}</div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <div style="display: flex; flex-direction: row">
+                <div style="width: 50%">BILL DATE</div>
+                <div style="width: 50%">: ${new Date(vendorBill.billingDate).toLocaleDateString('hi-IN', { year: 'numeric', month: 'numeric', day: 'numeric' })}</div>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td rowspan="2" colspan="2">
+              <p style="font-weight: bold; font-size: 15px">ADDRESS : ${shArr[0].consignments[0].consigner ? (shArr[0].consignments[0].consigner.places ? shArr[0].consignments[0].consigner.places[0].name : 'N/A') : "N'A"}</p>
+            </td>
+            <td colspan="2">
+              <div style="display: flex; flex-direction: row">
+                <div style="width: 50%">B.E/S.B NO.</div>
+                <div style="width: 50%">: ${getFromCf(shArr[0].customFields,"Bill Of Entry") ? getFromCf(shArr[0].customFields,"Bill Of Entry") : "N/A"}</div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <div style="display: flex; flex-direction: row">
+                <div style="width: 50%">DATE</div>
+                <div style="width: 50%">:</div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <div style="display: flex; flex-direction: row">
+                <div style="font-size: 15px">
+                  <span style="font-weight: bold">CONSIGNOR :</span><span> ${shArr[0].consignments[0].consigner.name ? shArr[0].consignments[0].consigner.name : 'N/A' }</span>
+                </div>
+                <div style="margin-left: 5px">
+                  <span style="font-weight: bold">GSTIN NO. :</span><span> ${shArr[0].consignments[0].consigner.gstNo ? shArr[0].consignments[0].consigner.gstNo : 'N/A'}</span>
+                </div>
+              </div>
+            </td>
+            <td style="width: 15%"></td>
+            <td style="width: 15%"></td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <div style="display: flex; flex-direction: row">
+                <div style="font-size: 15px">
+                  <span style="font-weight: bold">CONSIGNEE: </span><span>${shArr[0].consignments[0].consignee.name ? shArr[0].consignments[0].consignee.name : 'N/A' }</span>
+                </div>
+                <div style="margin-left: 5px">
+                  <span style="font-weight: bold">GSTIN NO. : </span><span>${shArr[0].consignments[0].consignee.gstNo ? shArr[0].consignments[0].consignee.gstNo : 'N/A'}</span>
+                </div>
+              </div>
+            </td>
+            <td style="width: 15%"></td>
+            <td style="width: 15%"></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="tableList">
+        <table class="tableList" border="1" style="border-collapse: collapse">
+          <tr style="font-weight: bold ; font-size:14px">
+            <th>S.NO.</th>
+            <th>G.R.NO.</th>
+            <th>DATE</th>
+            <th>VEHICLE NO.</th>
+            <th>CONTAINER NO.</th>
+            <th>SIZE<br />(FEET)</th>
+            <th>ROUTE</th>
+            <th>FREIGHT</th>
+            <th>TOLL</th>
+            <th>EXTRA<br />CHARGES</th>
+            <th>AMOUNT</th>
+          </tr>`      
+              let tableStr  = ''
+          for(let i=0;i<vendorBill.items.length;i++){
+              let sh = shArr.find(_=>_.uuid == vendorBill.items[i].shipment.id)
+              let toll  = getFromCf(sh.customFields,'TOLL') 
+              let appliedToll = toll ? Number(toll) : 0 
+              sumOfToll =sumOfToll + appliedToll
+            tableStr = tableStr + `<tr>
+            <td>${i+1}</td>
+            <td>${sh.consignments ? sh.consignments.map(_=>_.consignmentNo).join(",") : "N/A"}</td>
+            <td>${sh.shipmentDate}</td>
+            <td>${sh.fleetInfo.vehicle.vehicleRegistrationNumber}</td>
+            <td>${getFromCf(sh.customFields,'Container No.') ? getFromCf(sh.customFields,'Container No.') : "N/A" } </td>
+            <td>${sh.fleetInfo.vehicle.vehicleLoadType ? sh.fleetInfo.vehicle.vehicleLoadType.bodyType : "N/A"} </td>
+            <td>${sh.shipmentStages[0].hub ? sh.shipmentStages[0].hub.name : "N/A"} To ${sh.shipmentStages[sh.shipmentStages.length-1].hub ? sh.shipmentStages[sh.shipmentStages.length-1].hub.name : "N/A"}</td>
+            <td>${getFromCf(sh.customFields,'FreightCost')}</td>
+            <td>${appliedToll}</td>
+            <td>${vendorBill.items[i].remarks ? vendorBill.items[i].remarks.join(",") : " "}</td>
+            <td>${vendorBill.items[i].submittedAmount}</td>
+          </tr>`
+          }
+
+          let lastHtml = `<tr style="text-align: center"></tr>
+        </table>
+      </div>
+      <table
+        border="1"
+        style="width: 100%; border-collapse: collapse; margin-top: 200px"
+      >
+        <tr>
+          <td style="width: 70%; font-weight: bold; font-size: 15px">
+            Remark:
+          </td>
+          <td style="width: 15%; font-weight: bold; font-size: 15px">Total</td>
+          <td style="width: 15%; font-weight: bold; font-size: 15px">${totalSubmittedAmount}</td>
+        </tr>
+        <tr>
+          <td
+            rowspan="4"
+            style="width: 70%; font-weight: bold; font-size: 15px"
+          >
+            <!-- AMOUNT IN WORDS: ONE LAKH TWENTY THOUSAND NINE HUNDRED AND TWELVE
+            RUPEES AND ZERO PAISE ONLY -->
+          </td>
+          <td style="width: 15%; font-weight: bold; font-size: 15px">
+            TOLL/KP/OTHER
+          </td>
+          <td style="width: 15%; font-weight: bold; font-size: 15px">
+            ${sumOfToll}
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 15%; font-weight: bold; font-size: 15px">Total</td>
+          <td style="width: 15%; font-weight: bold; font-size: 15px">
+            ${sumOfToll + totalSubmittedAmount}
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 15%; font-weight: bold; font-size: 15px">
+            LESS ADVANCE
+          </td>
+          <td style="width: 15%; font-weight: bold; font-size: 15px"></td>
+        </tr>
+        <tr>
+          <td style="width: 15%; font-weight: bold; font-size: 15px">
+            PAYABLE
+          </td>
+          <td style="width: 15%; font-weight: bold; font-size: 15px">
+          ${sumOfToll + totalSubmittedAmount}
+          </td>
+        </tr>
+        <tr>
+          <td
+            colspan="12"
+            style="width: 15%; font-weight: bold; font-size: 15px"
+          >
+            E.&O.E.
+          </td>
+        </tr>
+      </table>
+      <table border="1" style="width: 100%; border-collapse: collapse">
+        <tr>
+          <td style="width: 5%; text-align: center">1</td>
+          <td style="width: 65%; font-weight: bold; font-size: 15px">
+            Cheque/DD. should be drawn in favour of ASHUTOSH LOGISTICS PVT LTD.
+            Payable at New Delhi
+          </td>
+          <td
+            rowspan="1"
+            style="
+              width: 30%;
+              font-weight: bold;
+              font-size: 15px;
+              text-align: center;
+            "
+          >
+            ASHUTOSH LOGISTICS PVT LTD.
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 5%; text-align: center">2</td>
+          <td style="width: 65%; font-weight: bold; font-size: 15px">
+            Any discepancies in the bill should be brought to the notice of the
+            company within 2 week of the bill date
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 5%; text-align: center">3</td>
+          <td style="width: 65%; font-weight: bold; font-size: 15px">
+            Any discepancies in the bill should be brought to the notice of the
+            company within 2 week of the bill date
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 5%; text-align: center">4</td>
+          <td style="width: 65%; font-weight: bold; font-size: 15px">
+            GST is payable by consignee/consignor.
+          </td>
+          <td
+            style="
+              width: 30%;
+              font-weight: bold;
+              font-size: 18px;
+              text-align: center;
+            "
+          >
+            AUTH. SIGN
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <p style="font-weight: bold; font-size: 18px; margin-top: 20px">
+      BANK DETAILS
+    </p>
+    <div class="bankDetail">
+      <div class="bankinfo" style="font-weight: bold">ACCOUNT NO.</div>
+      <div style="font-weight: bold; font-size: 14px">: 03962000003826</div>
+    </div>
+    <div class="bankDetail">
+      <div class="bankinfo" style="font-weight: bold">BANK NAME</div>
+      <div style="font-weight: bold; font-size: 14px">: HDFC BANK LTD</div>
+    </div>
+    <div class="bankDetail">
+      <div class="bankinfo" style="font-weight: bold">BRANCH</div>
+      <div style="font-weight: bold; font-size: 14px">
+        : CHARMWOOD VILLAGE,FARIDABAD
+      </div>
+    </div>
+    <div class="bankDetail">
+      <div class="bankinfo" style="font-weight: bold">RTGS/NEFT/IFSC</div>
+      <div style="font-weight: bold; font-size: 14px">: HDFC0000396</div>
+    </div>
+    <div class="bankDetail">
+      <div class="bankinfo" style="font-weight: bold">MICR NO.</div>
+      <div style="font-weight: bold; font-size: 14px">: 110240062</div>
+    </div>
+  </body>
+</html>
