@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
   constructor(private _worker: WebWorkerService) { }
 
  async ngOnInit() {   
-   await this._worker.sayHello();
+  //  await this._worker.sayHello();
   }
 
   incTomato() {
@@ -31,6 +31,8 @@ export class HomeComponent implements OnInit {
   async incApple() {
     await this._worker.countApple(this.countApple, 
                (value: number) => this.countApple = value);
+               console.log(this.countApple, 'this.countApple');
+               
   }
 
 }
