@@ -24,6 +24,8 @@ import { RoutingComponent } from './routing/routing.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { CustomerInvoiceComponent } from './customer-invoice/customer-invoice.component';
+import { HomeComponent } from './home/home.component';
+import {MatButtonModule} from '@angular/material/button';
 
  
 @NgModule({
@@ -36,7 +38,8 @@ import { CustomerInvoiceComponent } from './customer-invoice/customer-invoice.co
     UpdateIssueTypeComponent,
     IssueTypeDetailComponent,
     RoutingComponent,
-    CustomerInvoiceComponent
+    CustomerInvoiceComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -52,6 +55,7 @@ import { CustomerInvoiceComponent } from './customer-invoice/customer-invoice.co
      HttpClientModule,
      MatTableModule,
      MatMenuModule,
+     MatButtonModule,
      ServiceWorkerModule.register('ngsw-worker.js', {
        enabled: environment.production,
        // Register the ServiceWorker as soon as the app is stable
