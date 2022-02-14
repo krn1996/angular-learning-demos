@@ -1,22 +1,21 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import { Router } from '@angular/router';
+import {environment} from '../environments/environment';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+    selector: 'app-root',
+    templateUrl: './app.component.html'
 })
-export class AppComponent {
-  title = 'render-child';
-}
+export class AppComponent implements OnInit {
+    public sitename;
 
-// if (typeof Worker !== 'undefined') {
-//   // Create a new
-//   const worker = new Worker(new URL('./app.worker', import.meta.url));
-//   worker.onmessage = ({ data }) => {
-//     console.log(`page got message: ${data}`);
-//   };
-//   worker.postMessage('hello');
-// } else {
-//   // Web Workers are not supported in this environment.
-//   // You should add a fallback so that your program still executes correctly.
-// }
+    constructor(private router: Router) {
+      }
+    ngOnInit() {
+        this.sitename = environment.siteName;
+    }
+
+    secondApp() {
+     this.router.navigateByUrl("http://localhost:4001/en/");
+    }
+}
