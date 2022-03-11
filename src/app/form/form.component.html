@@ -1,0 +1,749 @@
+ 
+ 
+<div class="outer-container-form">
+
+
+ <form [formGroup]="addUserFrom" (ngSubmit)="onSubmit()" style="padding: 10px; margin: 10px; ">
+
+  <div class="flex-container" style="display: flex;" >
+    <div style="width: 200px; margin: 10px;">
+      <fieldset formGroupName="shipmentCreated">
+        <legend>Shipment Created</legend>
+    <div class="form-group">
+        <label for="mondayShipmentCreated">{{day7 | date:'EEEE, MMMM d, y' }}</label>
+        <input 
+            type="number" 
+            class="form-control" 
+            id="mondayShipmentCreated" 
+            formControlName="mondayShipmentCreated">
+    </div>
+    <div class="form-group">
+        <label for="tuesdayShipmentCreated">{{day6 | date:'EEEE, MMMM d, y' }}</label>
+        <input 
+            type="number" 
+            class="form-control" 
+            id="tuesdayShipmentCreated" 
+            formControlName="tuesdayShipmentCreated">
+    </div>
+    <div class="form-group">
+        <label for="wednesdayShipmentCreated">{{day5 | date:'EEEE, MMMM d, y' }}</label>
+        <input 
+            type="number" 
+            class="form-control" 
+            id="wednesdayShipmentCreated" 
+            formControlName="wednesdayShipmentCreated">
+    </div>
+    <div class="form-group">
+      <label for="thursdayShipmentCreated">{{day4 | date:'EEEE, MMMM d, y' }}</label>
+      <input 
+          type="number" 
+          class="form-control" 
+          id="thursdayShipmentCreated" 
+          formControlName="thursdayShipmentCreated">
+  </div>
+  <div class="form-group">
+    <label for="fridayShipmentCreated">{{day3 | date:'EEEE, MMMM d, y' }}</label>
+    <input 
+        type="number" 
+        class="form-control" 
+        id="fridayShipmentCreated" 
+        formControlName="fridayShipmentCreated">
+  </div>
+  <div class="form-group">
+  <label for="saturdayShipmentCreated">{{day2 | date:'EEEE, MMMM d, y' }}</label>
+  <input 
+      type="number" 
+      class="form-control" 
+      id="saturdayShipmentCreated" 
+      formControlName="saturdayShipmentCreated">
+  </div>
+  <div class="form-group">
+  <label for="sundayShipmentCreated">{{day1 | date:'EEEE, MMMM d, y' }}</label>
+  <input 
+    type="number" 
+    class="form-control" 
+    id="sundayShipmentCreated" 
+    formControlName="sundayShipmentCreated">
+  </div>
+  </fieldset>
+    </div>
+    <div style="width: 200px; margin: 10px;">  
+      <fieldset formGroupName="shipmentDelivered">
+        <legend>Shipment Delivered</legend>
+    <div class="form-group">
+        <label for="mondayShipmentDelivered">{{day7 | date:'EEEE, MMMM d, y' }}</label>
+        <input 
+            type="number" 
+            class="form-control" 
+            id="mondayShipmentDelivered" 
+            formControlName="mondayShipmentDelivered">
+    </div>
+    <div class="form-group">
+        <label for="tuesdayShipmentDelivered">{{day6 | date:'EEEE, MMMM d, y' }}</label>
+        <input 
+            type="number" 
+            class="form-control" 
+            id="tuesdayShipmentDelivered" 
+            formControlName="tuesdayShipmentDelivered">
+    </div>
+    <div class="form-group">
+        <label for="wednesdayShipmentDelivered">{{day5 | date:'EEEE, MMMM d, y' }}</label>
+        <input 
+            type="number" 
+            class="form-control" 
+            id="wednesdayShipmentDelivered" 
+            formControlName="wednesdayShipmentDelivered">
+    </div>
+    <div class="form-group">
+      <label for="thursdayShipmentDelivered">{{day4 | date:'EEEE, MMMM d, y' }}</label>
+      <input 
+          type="number" 
+          class="form-control" 
+          id="thursdayShipmentDelivered" 
+          formControlName="thursdayShipmentDelivered">
+  </div>
+  <div class="form-group">
+    <label for="fridayShipmentDelivered">{{day3 | date:'EEEE, MMMM d, y' }}</label>
+    <input 
+        type="number" 
+        class="form-control" 
+        id="fridayShipmentDelivered" 
+        formControlName="fridayShipmentDelivered">
+  </div>
+  <div class="form-group">
+  <label for="saturdayShipmentDelivered">{{day2 | date:'EEEE, MMMM d, y' }}</label>
+  <input 
+      type="number" 
+      class="form-control" 
+      id="saturdayShipmentDelivered" 
+      formControlName="saturdayShipmentDelivered">
+  </div>
+  <div class="form-group">
+  <label for="sundayShipmentDelivered">{{day1 | date:'EEEE, MMMM d, y' }}</label>
+  <input 
+    type="number" 
+    class="form-control" 
+    id="sundayShipmentDelivered" 
+    formControlName="sundayShipmentDelivered">
+  </div>
+  </fieldset>
+  
+    </div>
+    <div style="width: 200px; margin: 10px;">  
+      <fieldset formGroupName="pingFetched">
+        <legend>Pings Fetched Per Day</legend>
+    <div class="form-group">
+        <label for="mondayPingFetched">{{day7 | date:'EEEE, MMMM d, y' }}</label>
+        <input 
+            type="number" 
+            class="form-control" 
+            id="mondayPingFetched" 
+            formControlName="mondayPingFetched">
+    </div>
+    <div class="form-group">
+        <label for="tuesdayPingFetched">{{day6 | date:'EEEE, MMMM d, y' }}</label>
+        <input 
+            type="number" 
+            class="form-control" 
+            id="tuesdayPingFetched" 
+            formControlName="tuesdayPingFetched">
+    </div>
+    <div class="form-group">
+        <label for="wednesdayPingFetched">{{day5 | date:'EEEE, MMMM d, y' }}</label>
+        <input 
+            type="number" 
+            class="form-control" 
+            id="wednesdayPingFetched" 
+            formControlName="wednesdayPingFetched">
+    </div>
+    <div class="form-group">
+      <label for="thursdayPingFetched">{{day4 | date:'EEEE, MMMM d, y' }}</label>
+      <input 
+          type="number" 
+          class="form-control" 
+          id="thursdayPingFetched" 
+          formControlName="thursdayPingFetched">
+  </div>
+  <div class="form-group">
+    <label for="fridayPingFetched">{{day3 | date:'EEEE, MMMM d, y' }}</label>
+    <input 
+        type="number" 
+        class="form-control" 
+        id="fridayPingFetched" 
+        formControlName="fridayPingFetched">
+  </div>
+  <div class="form-group">
+  <label for="saturdayPingFetched">{{day2 | date:'EEEE, MMMM d, y' }}</label>
+  <input 
+      type="number" 
+      class="form-control" 
+      id="saturdayPingFetched" 
+      formControlName="saturdayPingFetched">
+  </div>
+  <div class="form-group">
+  <label for="sundayPingFetched">{{day1 | date:'EEEE, MMMM d, y' }}</label>
+  <input 
+    type="number" 
+    class="form-control" 
+    id="sundayPingFetched" 
+    formControlName="sundayPingFetched">
+  </div>
+  </fieldset>
+  
+    </div>
+    <div style="width: 200px; margin: 10px;">  
+      <fieldset formGroupName="activeUsers">
+        <legend> Users Active Per Day</legend>
+    <div class="form-group">
+        <label for="mondayActiveUsers">{{day7 | date:'EEEE, MMMM d, y' }}</label>
+        <input 
+            type="number" 
+            class="form-control" 
+            id="mondayActiveUsers" 
+            formControlName="mondayActiveUsers">
+    </div>
+    <div class="form-group">
+        <label for="tuesdayActiveUsers">{{day6 | date:'EEEE, MMMM d, y' }}</label>
+        <input 
+            type="number" 
+            class="form-control" 
+            id="tuesdayActiveUsers" 
+            formControlName="tuesdayActiveUsers">
+    </div>
+    <div class="form-group">
+        <label for="wednesdayActiveUsers">{{day5 | date:'EEEE, MMMM d, y' }}</label>
+        <input 
+            type="number" 
+            class="form-control" 
+            id="wednesdayActiveUsers" 
+            formControlName="wednesdayActiveUsers">
+    </div>
+    <div class="form-group">
+      <label for="thursdayActiveUsers">{{day4 | date:'EEEE, MMMM d, y' }}</label>
+      <input 
+          type="number" 
+          class="form-control" 
+          id="thursdayActiveUsers" 
+          formControlName="thursdayActiveUsers">
+  </div>
+  <div class="form-group">
+    <label for="fridayActiveUsers">{{day3 | date:'EEEE, MMMM d, y' }}</label>
+    <input 
+        type="number" 
+        class="form-control" 
+        id="fridayActiveUsers" 
+        formControlName="fridayActiveUsers">
+  </div>
+  <div class="form-group">
+  <label for="saturdayActiveUsers">{{day2 | date:'EEEE, MMMM d, y' }}</label>
+  <input 
+      type="number" 
+      class="form-control" 
+      id="saturdayActiveUsers" 
+      formControlName="saturdayActiveUsers">
+  </div>
+  <div class="form-group">
+  <label for="sundayActiveUsers">{{day1 | date:'EEEE, MMMM d, y' }}</label>
+  <input 
+    type="number" 
+    class="form-control" 
+    id="sundayActiveUsers" 
+    formControlName="sundayActiveUsers">
+  </div>
+  </fieldset>
+  
+    </div>
+    <div style="width: 200px; margin: 10px;">  
+      <fieldset formGroupName="trackingData">
+        <legend>Tracking Data</legend>
+    <div class="form-group">
+        <label for="gps">GPS</label>
+        <input 
+            type="number" 
+            class="form-control" 
+            id="gps" 
+            formControlName="gps">
+    </div>
+    <div class="form-group">
+        <label for="sim">SIM</label>
+        <input 
+            type="number" 
+            class="form-control" 
+            id="sim" 
+            formControlName="sim">
+    </div>
+    <div class="form-group">
+        <label for="manual">Manual</label>
+        <input 
+            type="number" 
+            class="form-control" 
+            id="manual" 
+            formControlName="manual">
+    </div>
+    <div class="form-group">
+      <label for="app">APP</label>
+      <input 
+          type="number" 
+          class="form-control" 
+          id="app" 
+          formControlName="app">
+  </div>
+  </fieldset>
+  
+  <div style="width: 200px; margin: 10px;">  
+    <fieldset formGroupName="totalConsent">
+      <legend>Total Consent Initiated</legend>
+  <div class="form-group">
+      <label for="airtel">Airtel</label>
+      <input 
+          type="number" 
+          class="form-control" 
+          id="airtel" 
+          formControlName="airtel">
+  </div>
+  <div class="form-group">
+      <label for="jio">JIO</label>
+      <input 
+          type="number" 
+          class="form-control" 
+          id="jio" 
+          formControlName="jio">
+  </div>
+  <div class="form-group">
+      <label for="others">Others</label>
+      <input 
+          type="number" 
+          class="form-control" 
+          id="others" 
+          formControlName="others">
+  </div>
+   
+  </fieldset>
+  
+  </div>
+    </div>
+    <div style="width: 200px; margin: 10px;">  
+      <fieldset formGroupName="WeeklyDataShipment">
+        <legend>Weekly Data</legend>
+    <div class="form-group">
+        <label for="shipmentCreatedWeekly">Shipment Created</label>
+        <input 
+            type="number" 
+            class="form-control" 
+            id="shipmentCreatedWeekly" 
+            formControlName="shipmentCreatedWeekly">
+    </div>
+    <div class="form-group">
+        <label for="consignmentDeliveredCurrent">Consignment Delivered This week</label>
+        <input 
+            type="number" 
+            class="form-control" 
+            id="consignmentDeliveredCurrent" 
+            formControlName="consignmentDeliveredCurrent">
+    </div>
+    <div class="form-group">
+        <label for="consignmentDeliveredLast">Consignment Delivered Last week</label>
+        <input 
+            type="number" 
+            class="form-control" 
+            id="consignmentDeliveredLast" 
+            formControlName="consignmentDeliveredLast">
+    </div>
+  </fieldset>
+  
+    </div>
+    <div style="width: 200px; margin: 10px;">  
+      <fieldset formGroupName="WeeklyDataPings">
+        <legend>Weekly Data</legend>
+    <div class="form-group">
+        <label for="pingFetchedWeekly">Total Pings Fetched</label>
+        <input 
+            type="number" 
+            class="form-control" 
+            id="pingFetchedWeekly" 
+            formControlName="pingFetchedWeekly">
+    </div>
+    <div class="form-group">
+        <label for="pingFetchedCurrent">Total Consent This week</label>
+        <input 
+            type="number" 
+            class="form-control" 
+            id="pingFetchedCurrent" 
+            formControlName="pingFetchedCurrent">
+    </div>
+    <div class="form-group">
+        <label for="pingFetchedLast">Total Consent Last week</label>
+        <input 
+            type="number" 
+            class="form-control" 
+            id="pingFetchedLast" 
+            formControlName="pingFetchedLast">
+    </div>
+  </fieldset>
+  
+    </div>
+    <div style="width: 200px; margin: 10px;">  
+      <fieldset formGroupName="WeeklyDataEmail">
+        <legend>Weekly Data</legend>
+    <div class="form-group">
+        <label for="emailWeekly">Email Sent</label>
+        <input 
+            type="number" 
+            class="form-control" 
+            id="emailWeekly" 
+            formControlName="emailWeekly">
+    </div>
+    <div class="form-group">
+        <label for="smsWeekly">SMS Sent</label>
+        <input 
+            type="number" 
+            class="form-control" 
+            id="smsWeekly" 
+            formControlName="smsWeekly">
+    </div>
+    <div class="form-group">
+        <label for="misWeekly">MIS Report Delivered</label>
+        <input 
+            type="number" 
+            class="form-control" 
+            id="misWeekly" 
+            formControlName="misWeekly">
+    </div>
+  </fieldset>
+  
+    </div>
+   </div>
+  
+    <button  >Save Form</button>
+  </form>  
+  
+  
+   <button style="margin-left: 20px;" (click)="exportAsHtml()">Export Template</button>
+ 
+  <button style="margin-left: 100px;" (click)="generateGraph()">Insert Graph in Template</button>
+</div>
+
+<div class="template-container" style="margin-top: 5%;" id="summary">
+   
+
+<div class="outer-container" style="height: auto; overflow-y: auto; max-height: 650px ; position: relative;">
+  
+   <div style="height: 101px; background: linear-gradient(180deg, #D4F9DF -82.08%, #FFFFFF 100%);  width: 100%;">
+  <div style="display: flex">
+    <div style="width:55%"> <div style="display: flex; justify-content: space-between">
+      <div style="position: absolute; margin-top: 12px; margin-left: 10px;">
+        <img src="data:image/jpeg;base64,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">
+         </div>
+    </div>
+  </div>
+    <div style="margin-top: 10px; font-size: 18px;"><div><span>Weekly update for </span>
+         <img style="    margin-right: 10px;
+         margin-left: 10px;" src="data:image/jpeg;base64,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">
+    <span style="color: #3D70B2;">V-Mart Retail</span> <br>
+    <span>{{day7 | date: 'MMMM d, y'}}  to  {{day1 | date: 'MMMM d, y'}}</span>
+        </div>
+  </div>
+   </div>
+  </div>
+
+  <div class="all-summary-container"   >
+      <div class="shipment-summary">
+          <div class="container" style="background: #FFFFFF;
+          box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.08);
+          border-radius: 8px;
+          height: 461px; margin-left: 16px; padding: 10px;">
+          <div style="font-weight: 500;font-size: 18px;line-height: 21px;
+          color: #5A6872; margin-left: 16px; "><span >SHIPMENT SUMMARY</span></div>
+          <div>
+          <div class="flex-container" style="display: flex;">
+              <div style="margin: 10px;
+              padding: 20px;">
+                  <div class="shipment-created" style="background: #FFFFFF;
+                              border: 1px solid #DFE3E6;
+                              box-sizing: border-box;
+                              border-radius: 8px;
+                              width: 180px;
+                              height: 88px;">
+                              <div style="margin-left: 30px;
+                              padding: 10px; "><span id="shipmentCreateCount">{{addUserFrom.value.WeeklyDataShipment.shipmentCreatedWeekly}}</span>
+                               <!-- <span style="margin-left: 15px; color: #5AA700;">
+                                  <span style="font-size: 20px;">&#8593;</span>
+                                  3%</span> -->
+                                 </div>
+                               <span style="font-weight: 500;
+                              font-size: 14px; color: #5A6872; margin-left: 20px;
+                               ">Shipments Created</span>
+                              </div>
+                              <div class="consignment-delivered" style="background: #FFFFFF;
+                              border: 1px solid #DFE3E6;
+                              box-sizing: border-box;
+                              border-radius: 8px; width: 180px;
+                              height: 88px; margin-top: 16px;">
+                                <div style="margin-left: 30px;
+                                padding: 10px; "><span>{{addUserFrom.value.WeeklyDataShipment.consignmentDeliveredCurrent}}</span>
+                                 <span style="margin-left: 15px; color: #E71D32;" *ngIf="consignmentPercentage < 0">
+                                    <span style="font-size: 20px;">&#8595;</span>
+                                    {{consignmentPercentage}}%</span>
+                                    <span style="margin-left: 15px; color: #5AA700;" *ngIf="consignmentPercentage > 0">
+                                      <span style="font-size: 20px;">&#8593;</span>
+                                      {{consignmentPercentage}}%</span> 
+                                   </div>
+                                 <span style="font-weight: 500;
+                                font-size: 14px; color: #5A6872; margin-left: 11px;
+                                 ">Consignment Delivered</span>
+                              </div>
+              </div>
+              <div>
+                  <div style="margin-bottom: 10px; margin-left: 40px"><span>Shipments Created v/s Shipments Delivered</span></div>
+                   <img style="margin-right: 10px;
+                   margin-left: 10px;" [src]='dataURL'>
+                  <br>
+                 
+              </div>
+          </div>
+                <div  style="display: flex; margin-top: 50px;">
+                  <div   style="width: 30%;">
+                      <div style="background: #FFFFFF;
+                      box-shadow: inset -1px 0px 0px #DFE3E6, inset 0px -1px 0px rgba(0, 0, 0, 0.08);
+                      border-radius: 8px 0px 0px 8px;  
+                  height: 64px; border: 1px solid #c7cacd; font-size: 14px;
+                  line-height: 16px; ">
+                  <div style="padding: 10px;
+                  margin-top: 10px;">        <span>Tracking Mode wise Breakup</span></div>
+                  </div>
+                  </div>
+                  <div    style="width: 70%;  ">
+                      <table style=" font-family: arial, sans-serif;
+                      border-collapse: collapse;
+                      width:100%; ">
+                          <tr style="font-size: 12px; font-weight: 300;">
+                            <th style=" border: 1px solid #dddddd;
+                            text-align: left;
+                            padding: 8px; background-color: #dddddd">GPS</th>
+                            <th style=" border: 1px solid #dddddd;
+                            text-align: left;
+                            padding: 8px; background-color: #dddddd">SIM</th>
+                            <th style=" border: 1px solid #dddddd;
+                            text-align: left;
+                            padding: 8px; background-color: #dddddd">Manual</th>
+                            <th style=" border: 1px solid #dddddd;
+                            text-align: left;
+                            padding: 8px; background-color: #dddddd">APP</th>
+                          </tr>
+                          <tr style=" border: 1px solid #dddddd;
+                          text-align: left;
+                          padding: 8px;">
+                            <td style=" border: 1px solid #dddddd;
+                            text-align: left;
+                            padding: 8px;">{{addUserFrom.value.trackingData.gps}}</td>
+                            <td style=" border: 1px solid #dddddd;
+                            text-align: left;
+                            padding: 8px;">{{addUserFrom.value.trackingData.sim}}</td>
+                            <td style=" border: 1px solid #dddddd;
+                            text-align: left;
+                            padding: 8px;">{{addUserFrom.value.trackingData.manual}}</td>
+                            <td style=" border: 1px solid #dddddd;
+                            text-align: left;
+                            padding: 8px;">{{addUserFrom.value.trackingData.app}}</td>
+                          </tr>
+                        </table>
+                  </div>
+                </div>
+          </div>   
+         </div>
+         <div class="ping-summary">
+          <div class="container" style="background: #FFFFFF;
+        box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.08);
+        border-radius: 8px;
+        height: 461px; margin-left: 16px; margin-top: 28px; padding: 10px;">
+        <div style="font-weight: 500;font-size: 18px;line-height: 21px;
+        color: #5A6872; margin-left: 16px; margin-top: 10px"><span >PING FETCHED SUMMARY</span></div>
+            <div>
+        <div class="flex-container" style="display: flex;">
+            <div style="margin: 10px;
+            padding: 20px;">
+                <div class="shipment-created" style="background: #FFFFFF;
+                            border: 1px solid #DFE3E6;
+                            box-sizing: border-box;
+                            border-radius: 8px;
+                            width: 180px;
+                            height: 88px;">
+                            <div style="margin-left: 30px;
+                            padding: 10px; "><span id="shipmentCreateCount">{{addUserFrom.value.WeeklyDataPings.pingFetchedWeekly}}</span>
+                             <!-- <span style="margin-left: 15px; color: #5AA700;">
+                                <span style="font-size: 20px;">&#8593;</span>
+                                3%</span> -->
+                               </div>
+                             <span style="font-weight: 500;
+                            font-size: 14px; color: #5A6872; margin-left: 20px;
+                             ">Total Pings Fetched</span>
+                            </div>
+                            <div class="consignment-delivered" style="background: #FFFFFF;
+                            border: 1px solid #DFE3E6;
+                            box-sizing: border-box;
+                            border-radius: 8px; width: 180px;
+                            height: 88px; margin-top: 16px;">
+                              <div style="margin-left: 30px;
+                              padding: 10px; "><span>{{addUserFrom.value.WeeklyDataPings.pingFetchedCurrent}}</span>
+                              <span style="margin-left: 15px; color: #E71D32;" *ngIf="consentPercentage < 0">
+                                <span style="font-size: 20px;">&#8595;</span>
+                                {{consentPercentage}}%</span>
+                                <span style="margin-left: 15px; color: #5AA700;" *ngIf="consentPercentage > 0">
+                                  <span style="font-size: 20px;">&#8593;</span>
+                                  {{consentPercentage}}%</span> 
+                                </div>
+                               <span style="font-weight: 500;
+                              font-size: 14px; color: #5A6872; margin-left: 20px;
+                               ">Total Consents</span>
+                            </div>
+            </div>
+            <div>
+                <div style="margin-bottom: 10px; margin-left: 40px"><span>Total Pings Fetched</span></div>
+        
+                <img style="margin-right: 10px;
+                margin-left: 10px;" [src]='dataURL2'>
+                <br>
+               
+            </div>
+        </div>
+              <div  style="display: flex; margin-top: 50px;">
+                <div   style="width: 30%;">
+                    <div style="background: #FFFFFF;
+                    box-shadow: inset -1px 0px 0px #DFE3E6, inset 0px -1px 0px rgba(0, 0, 0, 0.08);
+                    border-radius: 8px 0px 0px 8px;  
+                height: 64px; border: 1px solid #c7cacd; font-size: 14px;
+                line-height: 16px; ">
+                <div style="padding: 10px;
+                margin-top: 10px;">        <span>Total Consent Initiated</span></div>
+                </div>
+                </div>
+                <div    style="width: 70%;  ">
+                    <table style=" font-family: arial, sans-serif;
+                    border-collapse: collapse;
+                    width:100%; ">
+                        <tr style="font-size: 12px; font-weight: 300;">
+                          <th style=" border: 1px solid #dddddd;
+                          text-align: left;
+                          padding: 8px; background-color: #dddddd">AIRTEL</th>
+                          <th style=" border: 1px solid #dddddd;
+                          text-align: left;
+                          padding: 8px; background-color: #dddddd">JIO</th>
+                          <th style=" border: 1px solid #dddddd;
+                          text-align: left;
+                          padding: 8px; background-color: #dddddd">OTHERS</th>
+                        
+                        <tr style=" border: 1px solid #dddddd;
+                        text-align: left;
+                        padding: 8px;">
+                          <td style=" border: 1px solid #dddddd;
+                          text-align: left;
+                          padding: 8px;">{{addUserFrom.value.totalConsent.airtel}}</td>
+                          <td style=" border: 1px solid #dddddd;
+                          text-align: left;
+                          padding: 8px;">{{addUserFrom.value.totalConsent.jio}}</td>
+                          <td style=" border: 1px solid #dddddd;
+                          text-align: left;
+                          padding: 8px;">{{addUserFrom.value.totalConsent.others}}</td>
+                        
+                        </tr>
+                      </table>
+                </div>
+              </div>
+        </div> 
+        </div>
+         <div class="activity-summary">
+           <div class="container" style="background: #FFFFFF;
+        box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.08);
+        border-radius: 8px;  
+        height: 377px; margin-left: 16px; margin-top: 28px; padding: 10px;">
+        <div style="font-weight: 500;font-size: 18px;line-height: 21px;
+        color: #5A6872; margin-left: 16px; margin-top: 10px"><span >Activity Summary</span></div>
+            <div>
+        <div class="flex-container" style="display: flex;">
+            <div style="margin: 10px;
+            padding: 20px;">
+                <div class="shipment-created" style="background: #FFFFFF;
+                            border: 1px solid #DFE3E6;
+                            box-sizing: border-box;
+                            border-radius: 8px;
+                            width: 180px;
+                            height: 88px;">
+                            <div style="margin-left: 30px;
+                            padding: 10px;  font-size: 24px;"><span id="shipmentCreateCount">{{addUserFrom.value.WeeklyDataEmail.emailWeekly}}</span>
+                               </div>
+                             <span style="font-weight: 500;
+                            font-size: 14px; color: #5A6872; margin-left: 20px;
+                             ">Email Sent</span>
+                            </div>
+                            <div class="consignment-delivered" style="background: #FFFFFF;
+                            border: 1px solid #DFE3E6;
+                            box-sizing: border-box;
+                            border-radius: 8px; width: 180px;
+                            height: 88px; margin-top: 16px;">
+                              <div style="margin-left: 30px;
+                              padding: 10px; font-size: 24px;"><span>{{addUserFrom.value.WeeklyDataEmail.smsWeekly}}</span>
+                               </div>
+                               <span style="font-weight: 500;
+                              font-size: 14px; color: #5A6872; margin-left: 11px;
+                               ">SMS Sent</span>
+                            </div>
+                            <div class="consignment-delivered" style="background: #FFFFFF;
+                            border: 1px solid #DFE3E6;
+                            box-sizing: border-box;
+                            border-radius: 8px; width: 180px;
+                            height: 88px; margin-top: 16px;">
+                              <div style="margin-left: 30px;
+                              padding: 10px; font-size: 24px;"><span>{{addUserFrom.value.WeeklyDataEmail.misWeekly}}</span>
+                               </div>
+                               <span style="font-weight: 500;
+                              font-size: 14px; color: #5A6872; margin-left: 11px;
+                               ">MIS Report Delivered</span>
+                            </div>
+            </div>
+            <div>
+                <div style="margin-bottom: 10px; margin-left: 40px"><span>Daily Active Users</span></div>
+        
+                <img style="margin-right: 10px;
+                margin-left: 10px;" [src]='dataURL3'>
+                <br>
+               
+            </div>
+        </div>
+        </div> 
+        
+         </div>
+  </div>
+  
+ </div>
+
+</div>
+ 
+<div class="graph-container" *ngIf="hideGraph">
+  <div class="div"  style="width: 600px; height: 450px;">
+    <canvas id="canvas" baseChart 
+    [data]="salesData" 
+    [type]="'line'"
+    [options]="chartOptions"
+  >
+  </canvas>
+  </div>
+  <br>
+  <div class="div"  style="width: 600px; height: 450px;">
+    <canvas id="canvas2" baseChart 
+    [data]="pingData" 
+    [type]="'bar'"
+    [options]="chartOptions"
+  >
+  </canvas>
+  </div>
+  <br>
+  <div class="div"  style="width: 600px; height: 450px;">
+    <canvas id="canvas3" baseChart 
+    [data]="userActivityData" 
+    [type]="'line'"
+    [options]="chartOptions"
+  >
+  </canvas>
+  </div>
+   
+</div>
