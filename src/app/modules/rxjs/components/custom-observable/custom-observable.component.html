@@ -1,0 +1,31 @@
+<div class="container h-100">
+  <div class="my-3">
+    <h2>To Array</h2>
+    <p>Collects all source emissions and emits them as an array when the source completes.
+    </p>
+    <br>
+    <hr>
+    <br>
+    <div>
+      <strong>Method :</strong> Observable.create(observer => &#123;  your work with observer.next() observer.error() observer.complete()  &#125;)
+      <br><strong>For Angular 9 and After versions :</strong> new Observable((obs:Observer) => &#123;  your work with observer.next() observer.error() observer.complete()  &#125;)
+    </div>
+    <br>
+    <hr>
+    <br>
+      <div class="row">
+        <div class="col-md-6">
+          <strong>Ex-01 Manual </strong>
+          <hr>
+          <ul [ngClass]="status1st == 'complete' ? 'success' : status1st == 'error' ? 'error':''" id="elContainer" class="techlist"></ul>
+        </div>
+
+        <div class="col-md-6">
+          <strong> Ex-02 Custom Iterval observable </strong>
+          <hr>
+          <ul [ngClass]="status2nd == 'complete' ? 'success' : status2nd == 'error' ? 'error':''" id="elContainer2" class="techlist"></ul>
+
+        </div>
+
+  </div>
+</div>

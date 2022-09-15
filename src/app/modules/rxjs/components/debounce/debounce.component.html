@@ -1,0 +1,51 @@
+<div class="container h-100">
+  <div class="my-3">
+    <h2>Debounce</h2>
+    <p>Emits a notification from the source Observable only after a particular time span has passed without another source emission.</p>
+    <br>
+    <hr>
+    <br>
+    <div>
+    </div>
+    <div>
+      <strong>Example :</strong> In searching we can remove many api calls during keyup binding with api call.
+    </div>
+    <br>
+    <hr>
+    <br>
+      <div class="row">
+        <div class="col-md-4">
+          <strong>Ex-01 Normal Keyup binding to call </strong>
+          <hr>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Search</mat-label>
+            <input matInput placeholder="Any name ..." (keyup)="calling($event.target.value)">
+          </mat-form-field>
+          <ul id="elContainer" class="techlist">
+          </ul>
+        </div>
+
+        <div class="col-md-4">
+          <strong>Ex-02 Debounce Keyup binding to call with 1 sec </strong>
+          <hr>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Search</mat-label>
+            <input matInput placeholder="Any name ..." (keyup)="onKeyUp($event.target.value)">
+          </mat-form-field>
+          <ul id="elContainer1" class="techlist">
+          </ul>
+        </div>
+
+        <div class="col-md-4">
+          <strong>Ex-02 DistinctUntillChanged Keyup binding to call with 1 sec </strong>
+          <hr>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Search</mat-label>
+            <input matInput placeholder="Any name ..." (keyup)="onKeyUp2($event.target.value)">
+          </mat-form-field>
+          <ul id="elContainer2" class="techlist">
+          </ul>
+        </div>
+
+  </div>
+</div>

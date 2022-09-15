@@ -1,0 +1,32 @@
+<div class="container h-100">
+  <div class="my-3">
+    <h2>Filter</h2>
+    <p>Filter items emitted by the source Observable by only emitting those that satisfy a specified predicate.</p>
+    <br>
+    <hr>
+    <br>
+    <div>
+      <strong>Method :</strong> source.filter(data => &#123;  your work with data to get specific type of data.  &#125;)
+    </div>
+    <br>
+    <hr>
+    <br>
+      <div class="row">
+        <div class="col-md-6">
+          <strong>Ex-01 filter by name length is smaller then 6 </strong>
+          <hr>
+          <ul id="elContainer" class="techlist">
+            <li *ngFor="let item of ex1">{{item?.name}}</li>
+          </ul>
+        </div>
+
+        <div class="col-md-6">
+          <strong> Ex-02 filter by gender whose gender is female </strong>
+          <hr>
+          <ul id="elContainer" class="techlist">
+            <li *ngFor="let item of ex2">{{item?.name}}</li>
+          </ul>
+        </div>
+
+  </div>
+</div>

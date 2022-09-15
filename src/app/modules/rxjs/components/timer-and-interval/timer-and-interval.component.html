@@ -1,0 +1,78 @@
+<div class="container h-100">
+  <div class="my-3">
+    <h2>Interval</h2>
+    <p>
+      Creates an Observable that emits sequential numbers every specified interval of time, on a specified SchedulerLike.
+    </p>
+    <br>
+    <hr>
+    <br>
+      <div class="row">
+
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-header"> Stream Untill 5 sec</div>
+            <div class="card-body">
+
+              <ul id="elContainer"></ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-header"> Stream Untill we dont stop</div>
+            <div class="card-body">
+              <button *ngIf="!timerStart" (click)="startTimer()" class="btn btn-primary">Start</button>
+              <button *ngIf="timerStart" (click)="stopTimer()" class="btn btn-primary">Stop</button>
+              <ul id="elContainer2"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <div class="my-3">
+    <h2>Timer</h2>
+    <p>
+      Creates an observable that will wait for a specified time period, or exact date, before emitting the number 0.
+    </p>
+    <br>
+    <hr>
+    <br>
+      <div class="row">
+
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-header"> Timer Start After 5 sec</div>
+            <div class="card-body">
+
+              <ul id="elContainer3"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <div class="my-3">
+    <h2>Race Condition</h2>
+    <p>
+      When two observables are pointing to same data then it occurs.
+    </p>
+    <br>
+    <hr>
+    <br>
+      <div class="row">
+
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-header"> TOtal Time taken by two timers of 5 Sec and 3 Sec res.</div>
+            <div class="card-body">
+
+            <div>check in console after some seconds you will get both responces</div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+.card{
+  cursor: pointer;
+}
+.card:hover{
+  background-color: #002b5c;
+  color: white;
+}
+
+.card:hover .card-title{
+  font-size: large;
+  font-family: 'Helvetica Neue';
+}
+
+

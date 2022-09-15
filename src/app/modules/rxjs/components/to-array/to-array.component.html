@@ -1,0 +1,43 @@
+<div class="container h-100">
+  <div class="my-3">
+    <h2>To Array</h2>
+    <p>Collects all source emissions and emits them as an array when the source completes.
+    </p>
+    <br>
+    <hr>
+    <br>
+      <div class="row">
+        <!-- <div class="col-md-4">
+          <div class="card">
+            <div  class="card-header"> Add Stream</div>
+            <div class="card-body">
+              <button #addbtn class="btn btn-primary">Add</button>
+            </div>
+          </div>
+        </div> -->
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-header"> ToArray - Taking Interval's 5 observable stream into array</div>
+            <div class="card-body">
+              <ul id="elContainer"></ul>
+            </div>
+            <div class="card-footer">
+              You will see after 5 intervals the array is will appear in console
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-header"> ToArray - Taking data's age or Name from array of objects.</div>
+            <div class="card-body">
+              <ul id="elContainer2">
+                <li *ngFor="let user of users"><Strong>Name :</Strong>{{user.name}} <Strong>Age :</Strong>{{user.age}}</li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>

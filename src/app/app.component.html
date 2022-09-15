@@ -1,0 +1,23 @@
+<mat-toolbar>
+
+  RxJs and NgRx
+  </mat-toolbar>
+
+  <mat-sidenav-container>
+      <mat-sidenav mode="side" opened class="mat-elevation-z8">
+        <button routerLink="rxjs" mat-button class="menu-button">
+            <!-- <mat-icon>home</mat-icon> -->
+            <span>RxJs</span>
+        </button>
+        <button routerLink="ngrx" mat-button class="menu-button">
+            <!-- <mat-icon>person</mat-icon> -->
+            <span>NgRx</span>
+        </button>
+    </mat-sidenav>
+
+      <mat-sidenav-content>
+         <div class="content mat-elevation-z8">
+             <router-outlet></router-outlet>
+         </div>
+      </mat-sidenav-content>
+  </mat-sidenav-container>

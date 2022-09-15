@@ -1,0 +1,25 @@
+.techlist{
+  list-style-type: none;
+  margin:0%;
+  padding: 0%;
+}
+
+ul ::ng-deep li{
+    background: #f8f8f8;
+    padding: 5px 16px;
+    border: 1px solid #ddd;
+    margin-bottom: 4px;
+    border-radius: 8px;
+}
+
+.error ::ng-deep li{
+  color: red;
+  background-color: #ac000011;
+  border: 1px solid red;
+}
+
+ .success ::ng-deep  li{
+  color: green;
+  background-color: #00ff0026;
+  border: 1px solid green;
+}
